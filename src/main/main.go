@@ -3,5 +3,5 @@ import(
 "fmt"
 )
 func main() {
-	fmt.Println("Hello scaper")
+	fmt.Println("Hello scraper")
 }
