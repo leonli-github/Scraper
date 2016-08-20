@@ -1,0 +1,10 @@
+#Scraper development preperation by Leon
+Dependencies needed:
+
+1. For Golang html package:
+go get golang.org/x/net/html
+
+2. For mongodb go drive, two package needed
+
+go get gopkg.in/mgo.v2
+go get gopkg.in/mgo.v2/bson

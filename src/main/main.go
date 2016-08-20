@@ -1,7 +1,23 @@
 package main
 import(
-"fmt"
+	//"fmt"
+	//"golang.org/x/net/html"
+	//"net/http"
+	"debugger"
+        "razor"
+
 )
+
 func main() {
-	fmt.Println("Hello scraper")
+
+        //initiate debugger
+
+	file := debugger.Init()
+	defer file.Close()
+	razor.Ri()
+
+
 }
+
+
+
