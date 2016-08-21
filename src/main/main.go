@@ -12,9 +12,9 @@ func main() {
 
         //initiate debugger
 
-	file := debugger.Init()
+	file := debugger.Logfile
 	defer file.Close()
-	razor.Ri()
+	razor.Scraper()
 
 
 }

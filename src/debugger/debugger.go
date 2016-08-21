@@ -3,27 +3,30 @@ package debugger
 import(
 	"log"
 	"os"
+	//"fmt"
 )
 
 var logwriter debugger_s
+
+var Logfile *os.File
 
 type debugger_s struct{
 	logger *log.Logger
 }
 
 
-func Init() (logfile *os.File){
+func init() {
 	logwriter = debugger_s{}
-	logfile = logwriter.init()
-	return
+	Logfile = logwriter.initdebugger_s()s
 }
+
 func Log(s string) {
 
 	logwriter.logger.Println(s)
 }
 
 
-func (l *debugger_s) init() (logfile *os.File) {
+func (l *debugger_s) initdebugger_s() (logfile *os.File) {
 	fileName := "xxx_debug.log"
 	logfile,err  := os.Create(fileName)
 	if err != nil {
