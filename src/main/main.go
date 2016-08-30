@@ -14,7 +14,7 @@ func main() {
 
 	file := debugger.Logfile
 	defer file.Close()
-	razor.Scraper()
+	razor.Httprequest(razor.Tempurl)
 
 
 }

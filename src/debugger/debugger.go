@@ -17,7 +17,7 @@ type debugger_s struct{
 
 func init() {
 	logwriter = debugger_s{}
-	Logfile = logwriter.initdebugger_s()s
+	Logfile = logwriter.initdebugger_s()
 }
 
 func Log(s string) {
@@ -26,8 +26,9 @@ func Log(s string) {
 }
 
 
+
 func (l *debugger_s) initdebugger_s() (logfile *os.File) {
-	fileName := "xxx_debug.log"
+	fileName := "xxx_debug.html"
 	logfile,err  := os.Create(fileName)
 	if err != nil {
 		log.Fatalln("open file error !")

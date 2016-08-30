@@ -3,6 +3,7 @@
     <CLASSES>
       <root url="file:///usr/local/go/src" />
     </CLASSES>
+    <JAVADOC />
     <SOURCES />
   </library>
 </component>
