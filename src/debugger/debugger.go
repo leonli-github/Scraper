@@ -3,6 +3,7 @@ package debugger
 import(
 	"log"
 	"os"
+	"time"
 	//"fmt"
 )
 
@@ -28,8 +29,16 @@ func Log(s string) {
 
 
 func (l *debugger_s) initdebugger_s() (logfile *os.File) {
-	fileName := "xxx_debug.html"
-	logfile,err  := os.Create(fileName)
+
+	//production
+	//t := time.Now()
+	//fileName := t.String() + "_debug.log"
+        //-----------------
+	fileName := "debug.log"
+
+	logfile, err := os.Create(fileName)
+
+
 	if err != nil {
 		log.Fatalln("open file error !")
 	}
