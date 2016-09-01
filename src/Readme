@@ -8,3 +8,27 @@ go get golang.org/x/net/html
 
 go get gopkg.in/mgo.v2
 go get gopkg.in/mgo.v2/bson
+
+3. For scheduler need cron installed
+
+go get github.com/robfig.cron
+
+4. Google Stock api and description  
+http://www.google.com/ig/api?stock=AAPL 
+
+http://www.google.com/finance/getprices?q=2388&i=60&p=1d&f=d,c,h,l,o,v
+
+
+t 	Ticker
+e 	Exchange
+l 	Last Price
+ltt 	Last Trade Time
+l 	Price
+lt 	Last Trade Time Formatted
+lt_dts 	Last Trade Date/Time
+c 	Change
+cp 	Change Percentage
+el 	After Hours Last Price
+elt 	After Hours Last Trade Time Formatted
+div 	Dividend
+yld 	Dividend Yield

@@ -4,25 +4,34 @@ import(
 	"github.com/robfig/cron"
 	//"razor"
 	"fmt"
+	"debugger"
 )
-var ScheduleMap map[string]*cron.Cron
+var c *cron.Cron
+var ScheduleName string
 
-func ini(){
+func NewSchedule(scheName string){
+    ScheduleName = scheName
+    c = cron.New()
+    debugger.Log("Schedule:-" +ScheduleName +"-initiated" )
 
-	ScheduleMap = make(map[string]*cron.Cron)
 }
 
-func NewJob(){
+func NewJob(jobName string, timeExp string, f func()){
 
-	c := cron.New()
-	fmt.Println("start to add func")
-	c.AddFunc("@every 10s", func() { fmt.Println("Every 10s") })
-	c.AddFunc("@every 1s", func() { fmt.Println("Every 1s") })
-	fmt.Println("c start")
+	//c := cron.New()
+	//fmt.Println("start to add func")
+	//c.AddFunc("@every 10s", func() { fmt.Println("Every 10s") })
+	//c.AddFunc("@every 1s", func() { fmt.Println("Every 1s") })
+	c.AddFunc(timeExp,f)
+    fmt.Println("Add job: " + jobName)
+	//fmt.Println("c start")
+	//c.Start()
+	//defer c.Stop()
+	//select {}
+
+}
+func ScheduleStart(){
 	c.Start()
 	defer c.Stop()
-	select {
-
-	}
-
+	select{}
 }
