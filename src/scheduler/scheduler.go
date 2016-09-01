@@ -20,10 +20,10 @@ func NewJob(jobName string, timeExp string, f func()){
 
 	//c := cron.New()
 	//fmt.Println("start to add func")
-	//c.AddFunc("@every 10s", func() { fmt.Println("Every 10s") })
+	//c.AddFunc("@every 10s"git cannot push github/robfig.cron, func() { fmt.Println("Every 10s") })
 	//c.AddFunc("@every 1s", func() { fmt.Println("Every 1s") })
 	c.AddFunc(timeExp,f)
-    fmt.Println("Add job: " + jobName)
+        fmt.Println("Add job: " + jobName)
 	//fmt.Println("c start")
 	//c.Start()
 	//defer c.Stop()

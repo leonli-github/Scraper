@@ -1,29 +1,40 @@
 package main
 import(
-	"fmt"
+	//"fmt"
 	//"golang.org/x/net/html"
 	//"net/http"
 	"debugger"
         //"razor"
+
+
+	//"os"
+	"razor"
 	"scheduler"
 
+	//"fmt"
 )
 
 func main() {
 
-    //*initiate debugger*
+	//get flag
+	//flag := os.Args[1]
+	//fmt.Println(flag)
+        //
+
+	//*initiate debugger*
 	file := debugger.Logfile
 	defer file.Close()
 	//*initiate debugger*
 
-	//razor.Httprequest(razor.Tempurl)
-	scheduler.NewSchedule("Test Cron")
 
+	scheduler.NewSchedule("GetLiveStockFromGoogle")
+	//test
+	scheduler.NewJob("get stock every 1min","0 0/1 * ? 1-12 1-5",razor.GetLiveStockData_GoogleAPI)
 
-	scheduler.NewJob("2s","@every 2s",func() { fmt.Println("Every 2s") })
-    scheduler.NewJob("5s","@every 5s",func() { fmt.Println("Every 5s") })
+	//scheduler.NewJob("1s","@every 1s",func() { fmt.Println("Every 1s") })
+        //scheduler.NewJob("5s","@every 5s",func() { fmt.Println("Every 5s") })
    
-     scheduler.ScheduleStart()
+	scheduler.ScheduleStart()
 
 	//c.AddFunc("@every 10s", func() { fmt.Println("Every 10s") })
 

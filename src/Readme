@@ -14,10 +14,11 @@ go get gopkg.in/mgo.v2/bson
 go get github.com/robfig.cron
 
 4. Google Stock api and description  
-http://www.google.com/ig/api?stock=AAPL 
+http://www.google.com/finance/info?client=ig&q=
 
 http://www.google.com/finance/getprices?q=2388&i=60&p=1d&f=d,c,h,l,o,v
 
+{ "id": "675747" ,"t" : "2388" ,"e" : "HKG" ,"l" : "27.60" ,"l_fix" : "27.60" ,"l_cur" : "HK$27.60" ,"s": "0" ,"ltt":"4:09PM GMT+8" ,"lt" : "Sep 1, 4:09PM GMT+8" ,"lt_dts" : "2016-09-01T16:09:38Z" ,"c" : "+0.45" ,"c_fix" : "0.45" ,"cp" : "1.66" ,"cp_fix" : "1.66" ,"ccol" : "chg" ,"pcls_fix" : "27.15" }
 
 t 	Ticker
 e 	Exchange
