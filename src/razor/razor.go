@@ -13,6 +13,7 @@ import(
 	"configuration"
 
 	"time"
+	"debugger"
 )
 
 
@@ -27,6 +28,7 @@ func GetLiveStockData_GoogleAPI(){
 	error := json.Unmarshal(jsonbytes[3:],&stocks)
 	//fmt.Println(error)
 	if error == nil {
+		debugger.Log(stocks)
 		fmt.Println(stocks[0])
 		fmt.Println(stocks[1])
 		fmt.Println(time.Now())

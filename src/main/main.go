@@ -16,6 +16,8 @@ import(
 
 func main() {
 
+
+
 	//get flag
 	//flag := os.Args[1]
 	//fmt.Println(flag)

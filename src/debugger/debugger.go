@@ -21,9 +21,9 @@ func init() {
 	Logfile = logwriter.initdebugger_s()
 }
 
-func Log(s string) {
+func Log(a interface{}) {
 
-	logwriter.logger.Println(s)
+	logwriter.logger.Println(a)
 }
 
 
