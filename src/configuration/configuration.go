@@ -4,5 +4,5 @@ import(
 
 )
 
-const GOOGLE_REAL_TIME_URL = "http://www.google.com/finance/info?client=ig&q="
+const GOOGLE_REAL_TIME_URL = " 	"
 
