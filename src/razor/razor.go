@@ -1,6 +1,6 @@
 package razor
 import(
-	//"debugger"
+
 	"fmt"
 	//"golang.org/x/net/html"
 	"net/http"
@@ -12,24 +12,26 @@ import(
 	"encoding/json"
 	"configuration"
 
-	"time"
+	//"time"
+	"debugger"
 )
 
 
-const  Tempurl  = "http://www.aastocks.com/en/LTP/RTQuote.aspx?symbol=00911"
+const  Tempurl  = "https://www.etnet.com.hk/www/eng/stocks/realtime/quote.php?code=00911"
 
 func GetLiveStockData_GoogleAPI(){
 
-	url := configuration.GOOGLE_REAL_TIME_URL + "2388,0911"
+	url := configuration.GOOGLE_LONG_REAL_TIME_URL + "2388,0911"
 	jsonbytes := Httprequest(url)
 	//fmt.Println(string(jsonbytes))
-	stocks := []configuration.GoogleStockLiveStruct{}
+	stocks := []configuration.GoogleLongStockLiveStruct{}
 	error := json.Unmarshal(jsonbytes[3:],&stocks)
 	//fmt.Println(error)
 	if error == nil {
+		debugger.Log(stocks)
 		fmt.Println(stocks[0])
-		fmt.Println(stocks[1])
-		fmt.Println(time.Now())
+		//fmt.Println(stocks[1])
+
 	}
 
 
@@ -42,6 +44,13 @@ func Httprequest(url string) []byte{
         return bytes
 }
 
-func parseCSV(){
+func UpdateTicker(){
+
+}
+
+func Rz(){
+
+	bytes := Httprequest(Tempurl)
+	debugger.Log(string(bytes))
 
 }
