@@ -13,12 +13,15 @@ go get gopkg.in/mgo.v2/bson
 
 go get github.com/robfig.cron
 
-4. Google Stock api and description  
-http://www.google.com/finance/info?client=ig&q=
+4. Google Stock api and description
+ http://www.quantatrisk.com/2015/05/07/hacking-google-finance-in-pre-market-trading-python/
 
-http://www.google.com/finance/getprices?q=2388&i=60&p=1d&f=d,c,h,l,o,v
+1)http://www.google.com/finance/info?client=ig&q=2388
 
-{ "id": "675747" ,"t" : "2388" ,"e" : "HKG" ,"l" : "27.60" ,"l_fix" : "27.60" ,"l_cur" : "HK$27.60" ,"s": "0" ,"ltt":"4:09PM GMT+8" ,"lt" : "Sep 1, 4:09PM GMT+8" ,"lt_dts" : "2016-09-01T16:09:38Z" ,"c" : "+0.45" ,"c_fix" : "0.45" ,"cp" : "1.66" ,"cp_fix" : "1.66" ,"ccol" : "chg" ,"pcls_fix" : "27.15" }
+2)http://www.google.com/finance/info?infotype=infoquoteall&q=2388,0911
+
+3)http://www.google.com/finance/getprices?q=2388&i=60&p=1d&f=d,c,h,l,o,v
+
 
 t 	Ticker
 e 	Exchange
@@ -33,3 +36,28 @@ el 	After Hours Last Price
 elt 	After Hours Last Trade Time Formatted
 div 	Dividend
 yld 	Dividend Yield
+
+ "price" - Realtime price quote, delayed by up to 20 minutes.
+"priceopen" - The price as of market open.
+"high" - The current day's high price.
+"low" - The current day's low price.
+"volume" - The current day's trading volume.
+"marketcap" - The market capitalization of the stock.
+"tradetime" - The time of the last trade.
+"datadelay" - How far delayed the realtime data is.
+"volumeavg" - The average daily trading volume.
+"pe" - The price/earnings ratio.
+"eps" - The earnings per share.
+"high52" - The 52-week high price.
+"low52" - The 52-week low price.
+"change" - The price change since the previous trading day's close.
+"beta" - The beta value.
+"changepct" - The percentage change in price since the previous trading day's close.
+"closeyest" - The previous day's closing price.
+"shares" - The number of outstanding shares.
+"currency" - The currency in which the security is priced.
+
+
+5 google spreadsheet auto refresh
+
+
