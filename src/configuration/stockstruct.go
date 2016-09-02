@@ -28,3 +28,10 @@ type GoogleLongStockLiveStruct struct {
       EPS string `json:"eps"`
       Shares string `json:"shares"`
 }
+
+type StockTickerStruct struct {
+      Id string `json:"id"`
+      Timestamp string `json:"timestamp"`
+      Ticker string `json:"ticker"`
+      Values []GoogleLongStockLiveStruct `json:"values"`
+}

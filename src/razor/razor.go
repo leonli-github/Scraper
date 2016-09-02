@@ -44,6 +44,10 @@ func Httprequest(url string) []byte{
         return bytes
 }
 
+func UpdateTicker(){
+
+}
+
 func Rz(){
 
 	bytes := Httprequest(Tempurl)
