@@ -1,0 +1,9 @@
+[submodule "github.com/robfig/cron"]
+	path = github.com/robfig/cron
+	url = https://github.com/robfig/cron.git
+[submodule "github.com/d4l3k/talib"]
+	path = github.com/d4l3k/talib
+	url = https://github.com/d4l3k/talib.git
+[submodule "github.com/markcheno/go-quote"]
+	path = github.com/markcheno/go-quote
+	url = https://github.com/markcheno/go-quote.git
