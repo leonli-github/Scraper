@@ -30,7 +30,7 @@ func GetLiveStockData_GoogleAPI(){
 	//fmt.Println(string(jsonbytes))
 	stocks := []c.GoogleLongStockLiveStruct{}
 	error := json.Unmarshal(jsonbytes[3:],&stocks)
-	//fmt.Println(error)
+	//fmtgolang date.Println(error)
 	if error == nil {
 		//debugger.Log(stocks)
 
@@ -71,14 +71,6 @@ func InitiateTickermap(){
 	stockcodestring = strings.Join(c.Config.StockCode,",")
 	debugger.Log("Request stock code are: " + stockcodestring)
 
-
-
-
-
-
-
-
-
 }
 
 func UpdateTicker(value c.GoogleLongStockLiveStruct,origin c.StockTickerTapeStruct ) c.StockTickerTapeStruct{
@@ -93,18 +85,3 @@ func Rz(){
 	debugger.Log(c.Config.StockCode[0])
 
 }
-/*
-func Append(slice []configuration.GoogleLongStockLiveStruct, data configuration.GoogleLongStockLiveStruct) []configuration.GoogleLongStockLiveStruct {
-	m := len(slice)
-	n := m + len(data)
-	if n > cap(slice) { // if necessary, reallocate
-		// allocate double what's needed, for future growth.
-		newSlice := make([]configuration.GoogleLongStockLiveStruct, (n+1)*2)
-		copy(newSlice, slice)
-		slice = newSlice
-	}
-	slice = slice[0:n]
-	copy(slice[m:n], data)
-	return slice
-}
-*/
