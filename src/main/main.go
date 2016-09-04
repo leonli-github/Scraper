@@ -4,16 +4,9 @@ import(
 	//"golang.org/x/net/html"
 	//"net/http"
 	"debugger"
-        //"razor"
-
-
 	//"os"
 	"razor"
-	//"scheduler"
-
-	//"fmt"
 	"scheduler"
-
 )
 
 func main() {
@@ -33,7 +26,7 @@ func main() {
 
 	//razor.GetLiveStockData_GoogleAPI()
 	razor.InitiateTickermap()
-
+         //razor.Rz()
 //----------------------------------------------------------------------
 	scheduler.NewSchedule("GetLiveStockFromGoogle")
 	//scheduler.NewJob("get stock every 1min","0 0/1 * ? 1-12 1-5",razor.GetLiveStockData_GoogleAPI)
