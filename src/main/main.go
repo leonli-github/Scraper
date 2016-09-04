@@ -8,7 +8,7 @@ import(
 	//"razor"
 	//"scheduler"
 	//"math"
-	//"github.com/d4l3k/talib"
+	"github.com/d4l3k/talib"
 
 )
 
