@@ -4,14 +4,14 @@ import(
 	//"golang.org/x/net/html"
 	//"net/http"
 	"debugger"
-        //"razor"
-
-
 	//"os"
-	"razor"
+	//"razor"
 	//"scheduler"
+	//"math"
+	"github.com/d4l3k/talib"
 
-	//"fmt"
+	"math"
+	"fmt"
 )
 
 func main() {
@@ -28,15 +28,18 @@ func main() {
 	defer file.Close()
 	//*initiate debugger*
 
+	fmt.Println(talib.Sin([]float64{0, math.Pi / 2}))
 
-	razor.GetLiveStockData_GoogleAPI()
+	//razor.GetLiveStockData_GoogleAPI()
+	//razor.InitiateTickermap()
+         //razor.Rz()
 //----------------------------------------------------------------------
 	//scheduler.NewSchedule("GetLiveStockFromGoogle")
 	//scheduler.NewJob("get stock every 1min","0 0/1 * ? 1-12 1-5",razor.GetLiveStockData_GoogleAPI)
 
 	//test---------------------------------------------------------------------
 	//scheduler.NewJob("1s","@every 1s",func() { fmt.Println("Every 1s") })
-        //scheduler.NewJob("5s","@every 5s",func() { fmt.Println("Every 5s") })
+        //scheduler.NewJob("5s","@every 5s",razor.GetLiveStockData_GoogleAPI)
 	// test------------------------------------------------------------------
 
 	//scheduler.ScheduleStart()

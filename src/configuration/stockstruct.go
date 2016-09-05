@@ -29,7 +29,7 @@ type GoogleLongStockLiveStruct struct {
       Shares string `json:"shares"`
 }
 
-type StockTickerStruct struct {
+type StockTickerTapeStruct struct {
       Id string `json:"id"`
       Timestamp string `json:"timestamp"`
       Ticker string `json:"ticker"`

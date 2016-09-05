@@ -3,8 +3,7 @@ package debugger
 import(
 	"log"
 	"os"
-	//"time"
-	//"fmt"
+	"fmt"
 )
 
 var logwriter debugger_s
@@ -23,7 +22,9 @@ func init() {
 
 func Log(a interface{}) {
 
+	fmt.Println(a)
 	logwriter.logger.Println(a)
+
 }
 
 
@@ -42,7 +43,7 @@ func (l *debugger_s) initdebugger_s() (logfile *os.File) {
 	if err != nil {
 		log.Fatalln("open file error !")
 	}
-       l.logger = log.New(logfile,"[Debug]",log.Llongfile)
+       l.logger = log.New(logfile,"[Debug]",log.Ldate | log.Ltime)
          return
 }
 
