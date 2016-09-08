@@ -13,6 +13,8 @@ import(
 	"scheduler"
 	"razor"
 
+	"math"
+	"fmt"
 )
 
 func main() {
@@ -29,6 +31,7 @@ func main() {
 	defer file.Close()
 	//*initiate debugger*
 
+	fmt.Println(talib.Sin([]float64{0, math.Pi / 2}))
 
 	//razor.GetLiveStockData_GoogleAPI()
 	razor.InitiateTickermap()
@@ -46,7 +49,6 @@ func main() {
 
 
 
-	//fmt.Println(talib.Sin([]float64{0, math.Pi / 2}))
 
 }
 

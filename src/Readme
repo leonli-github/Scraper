@@ -60,4 +60,8 @@ yld 	Dividend Yield
 
 5 google spreadsheet auto refresh
 
+6 for ta-lib
+if cannt not run
+export LD_LIBRARY_PATH=/usr/lib:$LD_LIBRARY_PATH to fix  libta_lib.so.0 missing problem
+
 

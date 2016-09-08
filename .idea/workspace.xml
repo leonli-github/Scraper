@@ -4,6 +4,11 @@
     <list default="true" id="d9c08841-9036-47bf-b208-950c9272efe2" name="Default" comment="">
 <<<<<<< HEAD
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/github.com/robfig/cron" afterPath="$PROJECT_DIR$/src/github.com/robfig/cron" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/golang.org/x/net" afterPath="$PROJECT_DIR$/src/golang.org/x/net" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+=======
+<<<<<<< HEAD
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/github.com/robfig/cron" afterPath="$PROJECT_DIR$/src/github.com/robfig/cron" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/configuration/configuration.go" afterPath="$PROJECT_DIR$/src/configuration/configuration.go" />
 =======
@@ -14,7 +19,9 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/github.com/robfig/cron" afterPath="$PROJECT_DIR$/src/github.com/robfig/cron" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/golang.org/x/net" afterPath="$PROJECT_DIR$/src/golang.org/x/net" />
 >>>>>>> e037635d7f0b34f10289c4651cda7a20ba85682b
+>>>>>>> 500b0b7b2124c9bb42145c7adb32ad3ee77ef3e6
     </list>
+    <list id="9460d33c-0cc2-4c08-89a8-70394a58a152" name="Failed commit: Default" comment="test" />
     <ignored path="Scraper.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -40,6 +47,9 @@
         <entry file="file://$PROJECT_DIR$/src/main/main.go">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+            <state relative-caret-position="468">
+=======
+<<<<<<< HEAD
             <state relative-caret-position="252">
               <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding>
@@ -57,6 +67,7 @@
               <folding />
 =======
             <state relative-caret-position="702">
+>>>>>>> 500b0b7b2124c9bb42145c7adb32ad3ee77ef3e6
               <caret line="39" column="57" selection-start-line="39" selection-start-column="57" selection-end-line="39" selection-end-column="57" />
               <folding>
                 <element signature="e#13#146#0" expanded="true" />
@@ -69,7 +80,7 @@
       <file leaf-file-name="razor.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/razor/razor.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
+            <state relative-caret-position="101">
               <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
               <folding>
                 <element signature="e#14#189#0" expanded="true" />
@@ -82,10 +93,14 @@
         <entry file="file://$PROJECT_DIR$/src/Readme">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+            <state relative-caret-position="432">
+=======
+<<<<<<< HEAD
             <state relative-caret-position="18">
               <caret line="84" column="5" selection-start-line="84" selection-start-column="5" selection-end-line="84" selection-end-column="5" />
 =======
             <state relative-caret-position="-54">
+>>>>>>> 500b0b7b2124c9bb42145c7adb32ad3ee77ef3e6
               <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
 >>>>>>> e037635d7f0b34f10289c4651cda7a20ba85682b
               <folding />
@@ -115,6 +130,9 @@
         <entry file="file://$PROJECT_DIR$/src/configuration/stockstruct.go">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+            <state relative-caret-position="576">
+=======
+<<<<<<< HEAD
             <state relative-caret-position="198">
               <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding />
@@ -139,6 +157,7 @@
               <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
 =======
             <state relative-caret-position="339">
+>>>>>>> 500b0b7b2124c9bb42145c7adb32ad3ee77ef3e6
               <caret line="32" column="25" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
 >>>>>>> e037635d7f0b34f10289c4651cda7a20ba85682b
               <folding />
@@ -244,6 +263,8 @@
     </navigator>
     <panes>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       <pane id="Scratches" />
       <pane id="Scope" />
 =======
@@ -251,6 +272,7 @@
       <pane id="Scratches" />
       <pane id="PackagesPane" />
 >>>>>>> e037635d7f0b34f10289c4651cda7a20ba85682b
+>>>>>>> 500b0b7b2124c9bb42145c7adb32ad3ee77ef3e6
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -341,8 +363,14 @@
       </pane>
 <<<<<<< HEAD
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
+=======
+<<<<<<< HEAD
+      <pane id="PackagesPane" />
 =======
 >>>>>>> e037635d7f0b34f10289c4651cda7a20ba85682b
+>>>>>>> 500b0b7b2124c9bb42145c7adb32ad3ee77ef3e6
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -660,7 +688,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="28" width="1368" height="707" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -681,8 +709,7 @@
 >>>>>>> e037635d7f0b34f10289c4651cda7a20ba85682b
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18594436" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.4875549" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18594436" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -693,6 +720,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.4875549" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1051,8 +1079,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="8" column="19" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="19" />
+<<<<<<< HEAD
+=======
           <folding />
 >>>>>>> e037635d7f0b34f10289c4651cda7a20ba85682b
+>>>>>>> 500b0b7b2124c9bb42145c7adb32ad3ee77ef3e6
         </state>
       </provider>
     </entry>
@@ -1064,7 +1095,6 @@
 =======
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1072,8 +1102,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+<<<<<<< HEAD
+=======
           <folding />
 >>>>>>> e037635d7f0b34f10289c4651cda7a20ba85682b
+>>>>>>> 500b0b7b2124c9bb42145c7adb32ad3ee77ef3e6
         </state>
       </provider>
     </entry>
@@ -1081,7 +1114,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1089,7 +1121,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1097,6 +1128,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+<<<<<<< HEAD
+=======
           <folding />
         </state>
       </provider>
@@ -1122,23 +1155,23 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+>>>>>>> 500b0b7b2124c9bb42145c7adb32ad3ee77ef3e6
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/github.com/robfig/cron/.gitignore" />
+    <entry file="file://$PROJECT_DIR$/src/golang.org/x/net/.gitignore" />
     <entry file="file://$PROJECT_DIR$/src/debugger/debugger.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding>
-            <element signature="e#18#59#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Readme">
 >>>>>>> e037635d7f0b34f10289c4651cda7a20ba85682b
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-54">
+        <state relative-caret-position="432">
           <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding />
         </state>
@@ -1163,12 +1196,16 @@
     <entry file="file://$PROJECT_DIR$/src/main/main.go">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+        <state relative-caret-position="468">
+=======
+<<<<<<< HEAD
         <state relative-caret-position="252">
           <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
             <element signature="e#13#144#0" expanded="true" />
 =======
         <state relative-caret-position="702">
+>>>>>>> 500b0b7b2124c9bb42145c7adb32ad3ee77ef3e6
           <caret line="39" column="57" selection-start-line="39" selection-start-column="57" selection-end-line="39" selection-end-column="57" />
           <folding>
             <element signature="e#13#146#0" expanded="true" />
@@ -1185,7 +1222,7 @@
 =======
     <entry file="file://$PROJECT_DIR$/src/configuration/stockstruct.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
+        <state relative-caret-position="576">
           <caret line="32" column="25" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
 >>>>>>> e037635d7f0b34f10289c4651cda7a20ba85682b
           <folding />
@@ -1202,7 +1239,7 @@
 =======
     <entry file="file://$PROJECT_DIR$/src/razor/razor.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
+        <state relative-caret-position="101">
           <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding>
             <element signature="e#14#189#0" expanded="true" />
