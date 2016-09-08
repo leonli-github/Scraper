@@ -8,7 +8,10 @@ import(
 	//"razor"
 	//"scheduler"
 	//"math"
-	"github.com/d4l3k/talib"
+	//"github.com/d4l3k/talib"
+
+	"scheduler"
+	"razor"
 
 )
 
@@ -28,10 +31,10 @@ func main() {
 
 
 	//razor.GetLiveStockData_GoogleAPI()
-	//razor.InitiateTickermap()
+	razor.InitiateTickermap()
          //razor.Rz()
 //----------------------------------------------------------------------
-	//scheduler.NewSchedule("GetLiveStockFromGoogle")
+	scheduler.NewSchedule("GetLiveStockFromGoogle")
 	//scheduler.NewJob("get stock every 1min","0 0/1 * ? 1-12 1-5",razor.GetLiveStockData_GoogleAPI)
 
 	//test---------------------------------------------------------------------
@@ -39,7 +42,7 @@ func main() {
         //scheduler.NewJob("5s","@every 5s",razor.GetLiveStockData_GoogleAPI)
 	// test------------------------------------------------------------------
 
-	//scheduler.ScheduleStart()
+	scheduler.ScheduleStart()
 
 
 
