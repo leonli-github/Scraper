@@ -1,4 +1,3 @@
-
 [submodule "src/github.com/markcheno/go-quote"]
 	path = src/github.com/markcheno/go-quote
 	url = https://github.com/markcheno/go-quote.git
@@ -8,3 +7,6 @@
 [submodule "src/github.com/robfig/cron"]
 	path = src/github.com/robfig/cron
 	url = https://github.com/robfig/cron.git
+[submodule "src/golang.org/x/net"]
+	path = src/golang.org/x/net
+	url = https://github.com/golang/net.git
