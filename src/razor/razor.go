@@ -14,6 +14,7 @@ import(
 	"debugger"
 	"time"
 	"strings"
+
 )
 
 
@@ -24,6 +25,7 @@ var stockcodestring string
 
 
 func GetLiveStockData_GoogleAPI(){
+
 
 	url := c.GOOGLE_LONG_REAL_TIME_URL + stockcodestring
 	jsonbytes := Httprequest(url)
