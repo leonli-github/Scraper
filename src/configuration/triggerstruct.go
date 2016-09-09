@@ -1,3 +1,3 @@
 package configuration
 
-type strategy struct{}
+type Strategy struct{}
