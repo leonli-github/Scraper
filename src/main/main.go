@@ -1,5 +1,6 @@
 package main
-import(
+
+import (
 	//"fmt"
 	//"golang.org/x/net/html"
 	//"net/http"
@@ -17,12 +18,10 @@ import(
 
 func main() {
 
-
-
 	//*get flag*
 	//flag := os.Args[1]
 	//fmt.Println(flag)
-        //#get flag*
+	//#get flag*
 
 	//*initiate debugger*
 	file := debugger.Logfile
@@ -33,20 +32,17 @@ func main() {
 
 	//razor.GetLiveStockData_GoogleAPI()
 	razor.InitiateTickermap()
-         //razor.Rz()
-//----------------------------------------------------------------------
+	//razor.Rz()
+	//----------------------------------------------------------------------
 	scheduler.NewSchedule("GetLiveStockFromGoogle")
-	scheduler.NewJob("get stock every 1min","0 0/1 * ? 1-12 1-5",razor.GetLiveStockData_GoogleAPI)
+	scheduler.NewJob("get stock every 1min", "0 0/1 * ? 1-12 1-5", razor.GetLiveStockData_GoogleAPI)
 
 	//test---------------------------------------------------------------------
 	//scheduler.NewJob("1s","@every 1s",func() { fmt.Println("Every 1s") })
-        //scheduler.NewJob("1m","@every 1min",razor.GetLiveStockData_GoogleAPI)
+	//scheduler.NewJob("1m","@every 1min",razor.GetLiveStockData_GoogleAPI)
 	// test------------------------------------------------------------------
 
 	scheduler.ScheduleStart()
-
-
-
 
 }
 
