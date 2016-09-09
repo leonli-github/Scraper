@@ -17,7 +17,7 @@ type Con struct {
 
 func init() {
 	Config = &Con{}
-	bytes, err := ioutil.ReadFile("config.json")
+	bytes, err := ioutil.ReadFile("config/config.json")
 	if err == nil {
 
 		json.Unmarshal(bytes, Config)
