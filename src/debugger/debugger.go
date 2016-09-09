@@ -1,6 +1,6 @@
 package debugger
 
-import(
+import (
 	"log"
 	"os"
 	"fmt"
@@ -10,10 +10,9 @@ var logwriter debugger_s
 
 var Logfile *os.File
 
-type debugger_s struct{
+type debugger_s struct {
 	logger *log.Logger
 }
-
 
 func init() {
 	logwriter = debugger_s{}
@@ -27,24 +26,21 @@ func Log(a interface{}) {
 
 }
 
-
-
 func (l *debugger_s) initdebugger_s() (logfile *os.File) {
 
 	//production
 	//t := time.Now()
 	//fileName := t.String() + "_debug.log"
-        //-----------------
+	//-----------------
 	fileName := "debug.log"
 
 	logfile, err := os.Create(fileName)
 
-
 	if err != nil {
 		log.Fatalln("open file error !")
 	}
-       l.logger = log.New(logfile,"[Debug]",log.Ldate | log.Ltime)
-         return
+	l.logger = log.New(logfile, "[Debug]", log.Ldate | log.Ltime)
+	return
 }
 
 
