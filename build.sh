@@ -1,5 +1,5 @@
 export GOPATH=`pwd`
-git submodule update --init --recursive
+export GOBIN=`pwd`/bin
 go clean
-go run src/main/main.go
+go install src/main/main.go
 
