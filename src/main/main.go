@@ -17,13 +17,15 @@ import (
 	"ta"
 )
 
+const nottest = false
+
 func main() {
 
 	//*get flag*
 	//flag := os.Args[1]
 	//fmt.Println(flag)
 	//#get flag*
-if false {
+if nottest {
 	//*initiate debugger*
 	file := debugger.Logfile
 	defer file.Close()
@@ -42,7 +44,7 @@ if false {
 
 	scheduler.ScheduleStart()
 }else{
-     ta.ImportHistorialdata()
+     ta.GenerateModel()
 }
 
 
