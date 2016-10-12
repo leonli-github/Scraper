@@ -14,24 +14,27 @@ import(
 )
 
 func GenerateModel(){
-	f, _ := os.Create("test.log")
-	defer f.Close()
-	w := bufio.NewWriter(f)
+	f1, _ := os.Create("/home/inno2/d/test1.log")
+	defer f1.Close()
+	f2, _ := os.Create("/home/inno2/d/test2.log")
+	defer f2.Close()
+	w1 := bufio.NewWriter(f1)
+	w2 := bufio.NewWriter(f2)
 
 	for _,stock := range c.Config.StockCode{
-          file:= "data/" + stock + "_HK.json"
+          file:= "/home/inno2/d/data/" + stock + "_HK.json"
 		_, err := os.Stat(file)
 		if err != nil {
 			panic("file "+ file + "not exist")
 		}
-		PrepareModel(w,file)
+		PrepareModel(w1,w2,file)
 
 	}
 	fmt.Println("Done")
 }
 
 
-func PrepareModel(w *bufio.Writer, file string){
+func PrepareModel(w1 *bufio.Writer,w2 *bufio.Writer,file string){
 
 	historical :=  ImportHistorialdata(file)
 	dataset :=  LoadDataSet("close", historical)
@@ -95,12 +98,21 @@ func PrepareModel(w *bufio.Writer, file string){
 		fmt.Println(input)
 
 
-
-		_, err := w.WriteString(input)
-		if err !=nil {
-			fmt.Println(err)
+		if i<len(models)*8/10{
+			_, err := w1.WriteString(input)
+			if err !=nil {
+				fmt.Println(err)
+			}
+			w1.Flush()
+		}else {
+			_, err := w2.WriteString(input)
+			if err !=nil {
+				fmt.Println(err)
+			}
+			w2.Flush()
 		}
-		w.Flush()
+
+
 
 	}
 
