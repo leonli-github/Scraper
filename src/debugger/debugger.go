@@ -20,10 +20,12 @@ func init() {
 }
 
 func Log(a interface{}) {
-
 	fmt.Println(a)
 	logwriter.logger.Println(a)
+}
 
+func Logf(format string, v ...interface{}) {
+	logwriter.logger.Println(fmt.Sprintf(format, v...))
 }
 
 func (l *debugger_s) initdebugger_s() (logfile *os.File) {
