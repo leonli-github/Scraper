@@ -1,6 +1,6 @@
 .idea
-/log/**
+/log
 /pkg
-/bin/**
-/training_model/**
-/stock_data/**
+/bin
+/training_model
+/stock_data

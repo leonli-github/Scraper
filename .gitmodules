@@ -10,3 +10,6 @@
 [submodule "src/golang.org/x/net"]
 	path = src/golang.org/x/net
 	url = https://github.com/golang/net.git
+[submodule "src/github.com/Shopify/sarama"]
+	path = src/github.com/Shopify/sarama
+	url = https://github.com/Shopify/sarama.git
