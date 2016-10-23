@@ -37,7 +37,7 @@ elt 	After Hours Last Trade Time Formatted
 div 	Dividend
 yld 	Dividend Yield
 
- "price" - Realtime price quote, delayed by up to 20 minutes.
+"price" - Realtime price quote, delayed by up to 20 minutes.
 "priceopen" - The price as of market open.
 "high" - The current day's high price.
 "low" - The current day's low price.

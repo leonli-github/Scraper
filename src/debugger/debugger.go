@@ -32,7 +32,7 @@ func (l *debugger_s) initdebugger_s() (logfile *os.File) {
 	//t := time.Now()
 	//fileName := t.String() + "_debug.log"
 	//-----------------
-	fileName := "debug.log"
+	fileName := "log/debug.log"
 
 	logfile, err := os.Create(fileName)
 
