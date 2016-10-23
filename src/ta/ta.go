@@ -1,7 +1,8 @@
 package ta
-import(
+
+import (
 	c "configuration"
-        talib "github.com/d4l3k/talib"
+	"github.com/d4l3k/talib"
 	"io/ioutil"
 	"encoding/json"
 	//"runtime"
@@ -13,45 +14,42 @@ import(
 	"bufio"
 )
 
-func GenerateModel(){
-	f1, _ := os.Create("/home/inno2/d/test1.log")
+func GenerateModel() {
+	f1, _ := os.Create("training_model/8.dat")
 	defer f1.Close()
-	f2, _ := os.Create("/home/inno2/d/test2.log")
+	f2, _ := os.Create("training_model/2.dat")
 	defer f2.Close()
 	w1 := bufio.NewWriter(f1)
 	w2 := bufio.NewWriter(f2)
 
-	for _,stock := range c.Config.StockCode{
-          file:= "/home/inno2/d/data/" + stock + "_HK.json"
+	fmt.Println("Start")
+	for _, stock := range c.Config.StockCode {
+		file := "stock_data/" + stock + "_HK.json"
+		fmt.Printf("Processing %s\n", file)
 		_, err := os.Stat(file)
 		if err != nil {
-			panic("file "+ file + "not exist")
+			panic("file " + file + "not exist")
 		}
-		PrepareModel(w1,w2,file)
+		PrepareModel(w1, w2, file)
 
 	}
 	fmt.Println("Done")
 }
 
+func PrepareModel(w1 *bufio.Writer, w2 *bufio.Writer, file string) {
 
-func PrepareModel(w1 *bufio.Writer,w2 *bufio.Writer,file string){
+	historical := ImportHistorialdata(file)
+	dataset := LoadDataSet("close", historical)
 
-	historical :=  ImportHistorialdata(file)
-	dataset :=  LoadDataSet("close", historical)
+	rsi := CalcuRSI(dataset)
+	rsi = shift(rsi, 14)
+	macd, macdsig := CalcuMACD(dataset)
+	macd = shift(macd, 33)
+	macdsig = shift(macdsig, 33)
 
+	var models = make([]c.Modelstruct1, len(*historical))
 
-	rsi:=CalcuRSI(dataset)
-	rsi = shift(rsi,14)
-	macd,macdsig := CalcuMACD(dataset)
-	macd = shift(macd,33)
-	macdsig = shift(macdsig,33)
-
-	var models = make([]c.Modelstruct1,len(*historical))
-
-
-
-
-	for index,element := range *historical{
+	for index, element := range *historical {
 
 		models[index].High = element.High
 		models[index].Low = element.Low
@@ -66,53 +64,48 @@ func PrepareModel(w1 *bufio.Writer,w2 *bufio.Writer,file string){
 
 	}
 
+	for i := 33; i < len(models) - 7; i++ {
+		trend1 := models[i + 5].Close - models[i + 5].Open
+		trend2 := models[i + 6].Close - models[i + 6].Open
 
+		label := 0
 
-	for i:= 33; i<len(models)-7;i++ {
-		trend1 := models[i+5].Close-models[i+5].Open
-		trend2 := models[i+6].Close-models[i+6].Open
-
-		label:=0
-
-		if trend1>0 && trend2>0 {
+		if trend1 > 0 && trend2 > 0 {
 			label = 1
 		}
-		if trend1<0 && trend2<0 {
+		if trend1 < 0 && trend2 < 0 {
 			label = -1
 		}
 
 		var input string
-		for j:=0; j<=4 ; j++{
-			input +=  FloatToString(models[i+j].High) +" "
-			input +=  FloatToString(models[i+j].Low) +" "
-			input +=  FloatToString(models[i+j].Open) +" "
-			input +=  FloatToString(models[i+j].Close) +" "
-			input +=  FloatToString(models[i+j].High) +" "
-			input +=  FloatToString(models[i+j].Volume) +" "
-			input +=  FloatToString(models[i+j].RSI) +" "
-			input +=  FloatToString(models[i+j].MACD) +" "
-			input +=  FloatToString(models[i+j].MACDSignal) +" "
+		for j := 0; j <= 4; j++ {
+			input += FloatToString(models[i + j].High) + " "
+			input += FloatToString(models[i + j].Low) + " "
+			input += FloatToString(models[i + j].Open) + " "
+			input += FloatToString(models[i + j].Close) + " "
+			input += FloatToString(models[i + j].High) + " "
+			input += FloatToString(models[i + j].Volume) + " "
+			input += FloatToString(models[i + j].RSI) + " "
+			input += FloatToString(models[i + j].MACD) + " "
+			input += FloatToString(models[i + j].MACDSignal) + " "
 		}
 		input += strconv.Itoa(label) + "\n"
 
 		fmt.Println(input)
 
-
-		if i<len(models)*8/10{
+		if i < len(models) * 8 / 10 {
 			_, err := w1.WriteString(input)
-			if err !=nil {
+			if err != nil {
 				fmt.Println(err)
 			}
 			w1.Flush()
-		}else {
+		} else {
 			_, err := w2.WriteString(input)
-			if err !=nil {
+			if err != nil {
 				fmt.Println(err)
 			}
 			w2.Flush()
 		}
-
-
 
 	}
 
@@ -123,29 +116,29 @@ func FloatToString(input_num float64) string {
 	return strconv.FormatFloat(input_num, 'f', 3, 64)
 }
 
-func ImportHistorialdata(file string) *[]c.Diurnal{
+func ImportHistorialdata(file string) *[]c.Diurnal {
 	historical := &[]c.Diurnal{}
 	bytes, err := ioutil.ReadFile(file)
 	if err == nil {
 
-		json.Unmarshal(bytes,historical)
+		json.Unmarshal(bytes, historical)
 		//fmt.Println(historical)
 		// CalcuRSI(data)
 
-	}else{
+	} else {
 		debugger.Log(err)
 	}
-	return  historical
+	return historical
 
 }
 
-func LoadDataSet(field string, historical *[]c.Diurnal) []float64{
+func LoadDataSet(field string, historical *[]c.Diurnal) []float64 {
 
-	var data []float64 = make([]float64,len(*historical))
+	var data []float64 = make([]float64, len(*historical))
 
-	if field == "close"{
-		for index,element := range *historical{
-                     data[index] = element.Close
+	if field == "close" {
+		for index, element := range *historical {
+			data[index] = element.Close
 			//fmt.Println(element.Date,data[index])
 		}
 	}
@@ -153,44 +146,41 @@ func LoadDataSet(field string, historical *[]c.Diurnal) []float64{
 	//data2:= []float64{44.34,44.09,44.15,43.61,44.33,44.83,45.10,45.42,45.84,46.08,45.89,46.03,45.61,46.28,46.28,46.00,46.03,46.41,46.22}
 
 	//rsi := CalcuRSI(data2)
-        //rsi = shift(rsi,14)
+	//rsi = shift(rsi,14)
 	//for index,element := range data2{
 	//	fmt.Println(element,rsi[index])
 	//}
 	return data
 }
 
-func CalcuRSI(data []float64) []float64{
+func CalcuRSI(data []float64) []float64 {
 
-	rsi := talib.Rsi(data,14)
+	rsi := talib.Rsi(data, 14)
 	return rsi
 
 }
 
+func CalcuMACD(data []float64) ([]float64, []float64) {
 
-func CalcuMACD(data []float64) ([]float64,[]float64){
-
-
-        MACD,MACDSignal,_ := talib.Macd(data,12,26,9)
-        return MACD,MACDSignal
+	MACD, MACDSignal, _ := talib.Macd(data, 12, 26, 9)
+	return MACD, MACDSignal
 
 }
 
 func reverse(numbers []float64) {
-	for i, j := 0, len(numbers)-1; i < j; i, j = i+1, j-1 {
+	for i, j := 0, len(numbers) - 1; i < j; i, j = i + 1, j - 1 {
 		numbers[i], numbers[j] = numbers[j], numbers[i]
 	}
 }
 
-func shift(arr []float64, number int) []float64{
-
+func shift(arr []float64, number int) []float64 {
 
 	l := len(arr)
 
-	part1 := arr[0:l-number]
-	part2 := arr[l-number:]
+	part1 := arr[0:l - number]
+	part2 := arr[l - number:]
 
-	part2 = append(part2,part1...)
+	part2 = append(part2, part1...)
 
 	return part2
 
