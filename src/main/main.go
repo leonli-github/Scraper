@@ -18,7 +18,7 @@ import (
 	"kafka"
 )
 
-const nottest = 1
+const nottest = 2
 
 func main() {
 
@@ -47,7 +47,7 @@ func main() {
 	} else if nottest == 1 {
 		ta.GenerateModel()
 	} else if nottest == 2 {
-		kafka.producerMain()
+		kafka.ProducerMain()
 	}
 
 }

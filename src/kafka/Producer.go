@@ -26,7 +26,7 @@ var (
 	verifySsl = flag.Bool("verify", false, "Optional verify ssl certificates chain")
 )
 
-func producerMain() {
+func ProducerMain() {
 	flag.Parse()
 
 	if *verbose {
