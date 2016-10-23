@@ -18,7 +18,7 @@ import (
 	"kafka"
 )
 
-const nottest = 2
+const TEST_MODE = 2
 
 func main() {
 
@@ -26,7 +26,7 @@ func main() {
 	//flag := os.Args[1]
 	//fmt.Println(flag)
 	//#get flag*
-	if nottest == 0 {
+	if TEST_MODE == 0 {
 		//*initiate debugger*
 		file := debugger.Logfile
 		defer file.Close()
@@ -44,13 +44,10 @@ func main() {
 		// test------------------------------------------------------------------
 
 		scheduler.ScheduleStart()
-	} else if nottest == 1 {
+	} else if TEST_MODE == 1 {
 		ta.GenerateModel()
-	} else if nottest == 2 {
-		kafka.ProducerMain()
+	} else if TEST_MODE == 2 {
+		kafka.SendMessage()
 	}
 
 }
-
-
-

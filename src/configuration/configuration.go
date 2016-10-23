@@ -12,7 +12,9 @@ const GOOGLE_LONG_REAL_TIME_URL = "http://www.google.com/finance/info?infotype=i
 var Config *Con
 
 type Con struct {
-	StockCode []string `json:"stockcode"`
+	SaramaLogging bool `json:"saramaLogging"`
+	KafkaBrokers  []string `json:"kafkaBrokers"`
+	StockCode     []string `json:"stockcode"`
 }
 
 func init() {

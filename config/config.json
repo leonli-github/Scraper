@@ -1,4 +1,8 @@
 {
+  "saramaLogging": true,
+  "kafkaBrokers": [
+    "192.168.54.125:9092"
+  ],
   "stockcode": [
     "0001",
     "0002",
