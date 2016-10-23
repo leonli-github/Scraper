@@ -13,3 +13,24 @@
 [submodule "src/github.com/Shopify/sarama"]
 	path = src/github.com/Shopify/sarama
 	url = https://github.com/Shopify/sarama.git
+[submodule "src/github.com/davecgh/go-spew"]
+	path = src/github.com/davecgh/go-spew
+	url = https://github.com/davecgh/go-spew.git
+[submodule "src/github.com/eapache/go-resiliency"]
+	path = src/github.com/eapache/go-resiliency
+	url = https://github.com/eapache/go-resiliency.git
+[submodule "src/github.com/eapache/go-xerial-snappy"]
+	path = src/github.com/eapache/go-xerial-snappy
+	url = https://github.com/eapache/go-xerial-snappy.git
+[submodule "src/github.com/eapache/queue"]
+	path = src/github.com/eapache/queue
+	url = https://github.com/eapache/queue.git
+[submodule "src/github.com/golang/snappy"]
+	path = src/github.com/golang/snappy
+	url = https://github.com/golang/snappy.git
+[submodule "src/github.com/klauspost/crc32"]
+	path = src/github.com/klauspost/crc32
+	url = https://github.com/klauspost/crc32.git
+[submodule "src/github.com/rcrowley/go-metrics"]
+	path = src/github.com/rcrowley/go-metrics
+	url = https://github.com/rcrowley/go-metrics.git
